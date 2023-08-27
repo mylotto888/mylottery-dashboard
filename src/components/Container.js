@@ -33,7 +33,7 @@ const Container = ({ children }) => {
           defaultSelectedKeys={["users"]}
           onClick={e => handleMenuItem(e.key)}
           items={[
-            {},
+            { disabled: true },
             {
               key: "users",
               icon: <UserOutlined />,
