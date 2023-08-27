@@ -64,6 +64,7 @@ const Container = ({ children }) => {
               height: 64
             }}
           />
+          MY LOTTERY ADMIN PORTAL
         </Layout.Header>
         <Layout.Content
           style={{
