@@ -1,0 +1,14 @@
+.download {
+  &__container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  &__btn {
+    background-color: #1677ff; //#ff003c
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+  }
+}
