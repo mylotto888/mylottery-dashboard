@@ -9,7 +9,9 @@ import moment from "moment";
 const UserList = () => {
   const dispatch = useDispatch();
 
-  const { users } = useSelector(state => state.users);
+  const {
+    users: { users, count }
+  } = useSelector(state => state.users);
 
   const [pagination, setPagination] = useState({
     current: 1,
@@ -20,9 +22,11 @@ const UserList = () => {
 
   useEffect(() => {
     dispatch(fetchUsers({ current, pageSize }));
-    // setPagination({ ...pagination, total: count });
+    setPagination({ ...pagination, total: count });
     // eslint-disable-next-line
   }, [dispatch, current, pageSize]);
+
+  console.log({ users });
 
   const handleTableChange = pagination => {
     setPagination(pagination);
